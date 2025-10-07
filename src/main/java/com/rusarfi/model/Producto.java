@@ -1,7 +1,7 @@
 package com.rusarfi.model;
 
 import jakarta.persistence.*;
-import java.math.BigDecimal;
+
 
 @Entity
 @Table(name = "tblProducto")
@@ -16,7 +16,7 @@ public class Producto {
     private String nombre;
 
     @Column(name = "precio", nullable = false)
-    private BigDecimal precio;
+    private double precio;
 
     @Column(name = "stock", nullable = false)
     private int stock;
@@ -30,8 +30,8 @@ public class Producto {
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
-    public BigDecimal getPrecio() { return precio; }
-    public void setPrecio(BigDecimal precio) { this.precio = precio; }
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
 
     public int getStock() { return stock; }
     public void setStock(int stock) { this.stock = stock; }
